@@ -31,3 +31,10 @@ npm run preview:pages
 ## 来源
 
 共享取餐有约源码。React、Vinext、Drizzle与已有shadcn组件；vendor和build中的原始许可保留。AI示意餐品图不是商家实拍。本地后端开发见LOCAL_DEVELOPMENT.md。GitHub Pages只承担功能演示，[使用限制](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)。
+
+
+## 店家今日经营看板
+
+工作台显示今日已售订单、已核款金额、餐品份数、热销前五名，以及可切换的下单/预约取餐小时折线图。可点曲线或选择时段查看订单数和餐品份数。销售按北京时间今日下单且店家确认收款的 paid/ready/completed 订单统计；排除取消、超时和 payment_review，金额含加料，份数与排行不含单独加料。取餐曲线按今天的预约取餐时间统计，包括昨天建立、今天取餐的已核款可履约订单，表示预约量而非实测到店人数。后端独立汇总当天完整订单，不受队列100条显示限制。
+
+公开演示可切换一整天的虚构趋势样例，明确标注，不存成订单，也不混入店家的演示订单。跨设备仍需服务端，GitHub Pages 本身没有共享订单数据库。统计专项16项、静态模拟44项、本地接口36项通过；浏览器验证手机布局，不代表已覆盖所有手机真机。
